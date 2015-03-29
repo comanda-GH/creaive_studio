@@ -6,7 +6,7 @@
  * Time: 13:48
  */?>
 <!--content-->
-<footer>
+<footer class="id<?php echo get_the_id()?>">
     <ul class="footer">
         <li>
             <img src="<?php bloginfo('template_url'); ?>/images/logo_foot.png" alt="Творча майстерня"/>

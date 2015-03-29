@@ -18,13 +18,13 @@ get_header(); ?>
                 query_posts('cat=4');   // указываем ID рубрик, которые необходимо вывести.
                 while (have_posts()) : the_post();  // запускаем цикл обхода материалов блога
                     ?>
+                <figure class="box<?php if( $count%3 == 0 ) { echo '-1'; }; $count++; ?>">
                     <?php echo '<h3 class="num'.$post->ID.'">'?><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <figure>
                     <!--Вывод миниатюры-->
                     <?php if ( has_post_thumbnail()): ?><?php the_post_thumbnail(array(231,229), array("class" => "num$post->ID"));  ?><?php endif;?>
                     <!--/Вывод миниатюры-->
-                    <?php the_excerpt();?>
-                    </figure>
+                    <figcaption><?php the_excerpt();?></figcaption>
+                </figure>
                <?php endwhile;  // завершаем цикл.
             endif;
             /* Сбрасываем настройки цикла. Если ниже по коду будет идти еще один цикл, чтобы не было сбоя. */
