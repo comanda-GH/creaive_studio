@@ -1,0 +1,13 @@
+@media (min-width: 961px) {
+  section.header-wrap header.fix ul.nav li {
+    margin: 0 15px ;
+  }
+  section.header-wrap header.fix ul.nav li.main {
+    margin-left: 0;
+  }
+}
+@media (max-width: 960px) {
+  .wrap {
+    padding: 0 10px;
+  }
+}
