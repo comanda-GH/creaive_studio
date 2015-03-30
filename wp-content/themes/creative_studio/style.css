@@ -365,9 +365,9 @@ footer ul.footer {
 footer ul.footer li a {
   color: #FFF;
 }
-footer ul.footer li div {
+/*footer ul.footer li div {
     display:none;
-}
+}*/
 footer ul.footer li ul.contacts li span, footer ul.footer li ul.contacts li a {
   font-weight: bold;
   font-size: 0.75em;

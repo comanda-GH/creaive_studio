@@ -17,10 +17,10 @@
                 <li><a href="mailto:youth-organization@mail.ru">e-mail youth-organization@mail.ru</a></li>
             </ul>
         </li>
-        <li>
-            <?php wp_nav_menu(array('theme_location'=>'menu',
-            'menu_class'=>'nav'))?>
-        </li>
+        <!--<li>
+            <?php /*wp_nav_menu(array('theme_location'=>'menu',
+            'menu_class'=>'nav'))*/?>
+        </li>-->
         <li>
             <ul class="social">
                 <li>
