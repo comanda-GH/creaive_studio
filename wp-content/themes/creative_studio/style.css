@@ -442,59 +442,85 @@ footer ul.footer li ul.social li ul li.spilka-logo {
     margin: 45px auto 30px;
     text-align: center;
 }
-.studio div.wrap .box-1 {
-    position: relative;
-    float:left;
-    clear:left;
-    width: 33%;
-    margin-left: 0;
-    margin-top: 1.5%;
-}
-.studio div.wrap .box {
-    position: relative;
-    float:left;
-    width: 33%;
-    margin-left: 0.5%;
-    margin-top: 1.5%;
-}
+@media (min-width: 641px) {
+    .studio div.wrap .box-1 {
+        position: relative;
+        float: left;
+        clear: left;
+        width: 33%;
+        margin-left: 0;
+        margin-top: 1.5%;
+    }
 
-.studio div.wrap .box figcaption, .box-1 figcaption  {
-    position: absolute;
-    top: 65px;
-    left: 33px;
-    width: 80%;
-    height: 80%;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    background: rgba(65, 226, 146, 0.95);
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
+    .studio div.wrap .box {
+        position: relative;
+        float: left;
+        width: 33%;
+        margin-left: 0.5%;
+        margin-top: 1.5%;
+    }
 }
+    .studio div.wrap .box figcaption, .box-1 figcaption {
+        position: absolute;
+        top: 65px;
+        left: 33px;
+        width: 80%;
+        height: 80%;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        background: rgba(65, 226, 146, 0.95);
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+    }
 
-.studio div.wrap .box figcaption:hover, .box-1 figcaption:hover {
-    position: absolute;
-    top: 65px;
-    left: 33px;
-    width: 80%;
-    height: 80%;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
-    background: rgba(65, 226, 146, 0.95);
-}
-.studio div.wrap .box figcaption p, .box-1 figcaption p {
-    position: relative;
-    top: 50px;
-    left: 10px;
-    width: 90%;
-    font-size: 1.375em;
-    color: #fff;
-}
+    .studio div.wrap .box figcaption:hover, .box-1 figcaption:hover {
+        position: absolute;
+        top: 65px;
+        left: 33px;
+        width: 80%;
+        height: 80%;
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        background: rgba(65, 226, 146, 0.95);
+    }
 
+    .studio div.wrap .box figcaption p, .box-1 figcaption p {
+        position: relative;
+        max-width: 220px;
+        padding:5px;
+        top: 50px;
+        left: 10px;
+        width: 90%;
+        font-size: 1.375em;
+        color: #fff;
+    }
+
+@media (max-width: 640px) {
+    .studio div.wrap figure,  figcaption{
+        position:relative;
+        margin: 0 auto 40px;
+        min-width: 250px;
+    }
+    .studio div.wrap .box figcaption:hover, .box-1 figcaption:hover {
+        position: absolute;
+        top: 60px;
+        left: 33px;
+        width: 80%;
+        height: 80%;
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        background: rgba(65, 226, 146, 0.95);
+    }
+}
+.studio div h3  {
+    min-height: 60px;
+}
 .studio div h3 a {
   font-size: 1.5625em;
   line-height: 1.92em;
   line-height: 1em;
+    min-height: 60px;
 }
 .studio div.wrap h3.num67 a {
   color: #FF74FF;
@@ -587,16 +613,375 @@ footer ul.footer li ul.social li ul li.spilka-logo {
   behavior: url(styles/PIE.htc);
 }
 
- footer.id8 {
+ footer.id8 , footer.id10{
 
   background-image: none;
   background-color: #00B1E7;
+}
+/*----------------------------------------------------------------------------------//
+//-----------------------------English studia---------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_82 h1 {
+    background: url("images/english_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0;
+}
+.s_82 h3.title {
+    background: url("images/english_header.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_82 h3.title a{
+    color: #FFF;
+}
+.s_82  p , h4 , li h3{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+ footer.id82 {
+     background-image: none;
+     background-color: #00B1E7;
+}
+/*----------------------------------------------------------------------------------//
+//--------------------------enlightenment studia------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_85 h1 {
+    background: url("images/enlightenment_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0
+}
+.s_85 h3.title {
+    background: url("images/enlightenment_header.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_85 h3.title a{
+    color: #FFF;
+}
+.s_85  p , h4 , li h3, li li{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+ footer.id85 {
+     background-image: none;
+    background-color: #BA75FF;
+}
+/*----------------------------------------------------------------------------------//
+//--------------------------horeograf studia------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_70 h1 {
+    background: url("images/enlightenment_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0
+}
+.s_70 h3.title {
+    background: url("images/enlightenment_header.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_70 h3.title a{
+    color: #FFF;
+}
+.s_70  p , h4 , li h3, li li{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+footer.id70 {
+    background-image: none;
+    background-color:#40E291;
+}
+/*----------------------------------------------------------------------------------//
+//--------------------------sych mest studia------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_76 h1 {
+    background: url("images/enlightenment_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0
+}
+.s_76 h3.title {
+    background: url("images/enlightenment_header.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_76 h3.title a{
+    color: #FFF;
+}
+.s_76  p , h4 , li h3, li li{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+footer.id76 {
+    background-image: none;
+    background-color:#40E291;
+}
+/*----------------------------------------------------------------------------------//
+//--------------------------actor studia------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_79 h1 {
+    background: url("images/enlightenment_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0
+}
+.s_79 h3.title {
+    background: url("images/enlightenment_header.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_79 h3.title a{
+    color: #FFF;
+}
+.s_79  p , h4 , li h3, li li{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+footer.id79 {
+    background-image: none;
+    background-color:#FF9673;
+}
+/*----------------------------------------------------------------------------------//
+//--------------------------step studia------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_91 h1 {
+    background: url("images/enlightenment_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0
+}
+.s_91 h3.title {
+    background: url("images/enlightenment_header.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_91 h3.title a{
+    color: #FFF;
+}
+.s_91 p , h4 , li h3, li li{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+footer.id91 {
+    background-image: none;
+    background-color:#FF9673;
+}
+/*----------------------------------------------------------------------------------//
+//--------------------------------Vocal studia--------------------------------------//
+//----------------------------------------------------------------------------------*/
+
+.s_67 h1 {
+    background: url("images/s_vocal_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0
+}
+.s_67 h3.title {
+    background: url("images/s_vocal_wrapp.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_67 h3.title a{
+    color: #FFF;
+}
+.s_67  p , h4 , li h3{
+    text-align: center;
+
+
+    color: #444;
+
+    box-sizing: border-box;
+}
+.s_67 div.wrap ul.teacher li {
+    display: inline-block;
+    text-align: center;
+}
+.s_67 div.wrap ul.teacher li p {
+    weight: 300px;
+
+
+}
+ footer.id67 {
+     background-image: none;
+    background-color: #FDA1DF;
+}
+/*----------------------------------------------------------------------------------//
+//-----------------------------leading studia---------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_73 h1 {
+    background: url("images/leading_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0
+}
+.s_73 h3.title {
+    background: url("images/leading_header.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_73 h3.title a{
+    color: #FFF;
+}
+.s_73  p , h4 , li h3, li li{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+ footer.id73 {
+    clear: both;
+    background-image: none;
+    background-color: #FF9775;
+}
+/*----------------------------------------------------------------------------------//
+//-----------------------------psyho studia-----------------------------------------//
+//----------------------------------------------------------------------------------*/
+.s_88 h1 {
+    background: url("images/psyho_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0;
+
+}
+.s_88 h3.title {
+    background: url("images/psyho_header.png") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    font-size: 3.75em;
+    line-height: 7em;
+    padding: 20px 0;
+}
+.s_88 h3.title a{
+    color: #FFF;
+}
+.s_88  p , h4 , li h3{
+    text-align: center;
+    max-width: 513px;
+    margin: 0 auto;
+    color: #444;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+ footer.id88 {
+     background-image: none;
+    background-color: #C66F71;
 }
 
 /*----------------------------------------------------------------------------------//
 //-------------------------------------AFFICHE--------------------------------------//
 //----------------------------------------------------------------------------------*/
-.affiche main h1 {
+.affiche h1 {
   font-family: "Comfortaa";
   font-weight: normal;
   color: #FFF;
@@ -627,6 +1012,10 @@ footer ul.footer li ul.social li ul li.spilka-logo {
 .affiche main ul.slide li {
   display: inline-block;
   padding: 10px 8px;
+}
+.affiche  li p {
+    display: inline-block;
+    padding: 10px 8px;
 }
 @media (max-width: 900px) {
   .affiche main ul.slide li {
@@ -663,7 +1052,7 @@ ul.numeric li.num {
 /*----------------------------------------------------------------------------------//
 //-------------------------------------NEWS-----------------------------------------//
 //----------------------------------------------------------------------------------*/
-.new main h1 {
+.new  h1 {
   font-family: "Comfortaa";
   font-weight: normal;
   color: #FFF;
@@ -713,12 +1102,288 @@ ul.numeric li.num {
   color: #444444;
 }
 
- footer.id1 {
+ footer.id12 {
   clear: both;
   background-image: none;
   background-color: #BA75FF;
 }
+/*----------------------------------------------------------------------------------//
+//-----------------------------------about us---------------------------------------//
+//----------------------------------------------------------------------------------*/
+.about h1 {
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    background: url("images/about_us_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0;
+}
+.about  .wrap {
+    text-align: justify;
+    max-width: 550px;
+    margin: 0 auto;
+    color: #444;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.about  .wrap h2 {
+    margin: 50px 0 20px;
+    font-size: 1.5625em;
+    line-height: 1.92em;
+}
 
+.about  .wrap img {
+    padding: 15px 0;
+
+}
+.about  .wrap p, .about main .wrap ul.object li {
+    line-height: 22.4px;
+
+}
+.about  .wrap h3, .about main .wrap ul.object {
+    color: #212121;
+}
+.about  .wrap h3 {
+    font-size: 1.25em;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+}
+.about  .wrap ul.object li {
+    text-align: justify;
+}
+.about  .wrap ul.object {
+    margin-bottom: 45px;
+}
+footer.id119  {
+    clear: both;
+    background-image: none;
+    background-color: #FFC943;
+}
+/*----------------------------------------------------------------------------------//
+//-----------------------------------PROJECT----------------------------------------//
+//----------------------------------------------------------------------------------*/
+.proj {
+    color: #444;
+}
+.proj h1 {
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    background: url("images/project_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0;
+}
+.proj div.wrap p:first-child {
+    margin-top: 30px;
+    font-size: 1.125em;
+    line-height: 1.33333em;
+}
+.proj .wrap figure {
+    height: 250px;
+
+}
+
+.proj .wrap figure, .proj .wrap h3 {
+    text-align: center;
+}
+.proj .wrap figure.box-1 img {
+    float: left;
+    padding: 0px 20px 10px 0px;
+}
+.proj .wrap figure.box img {
+    float: right;
+    padding: 0px 0px 0px 10px;
+}
+.proj .wrap ul.project-list figure p {
+    text-align: left;
+    line-height: 22.4px;
+    text-align: left;
+    padding: 30px 0px 0px 0px;
+}
+.proj .wrap h3 {
+    margin-bottom: 10px;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    text-align: center;
+    width: 50%;
+}
+.proj .wrap figure {
+    margin: 10px auto;
+}
+ footer.id134 {
+    clear: both;
+    background-image: none;
+    background-color: #29B14D;
+}
+/*----------------------------------------------------------------------------------//
+//-----------------------------------GALLERY----------------------------------------//
+//----------------------------------------------------------------------------------*/
+.gal main {
+    /*end media 420*/
+}
+.gal  h1 {
+    background: url("images/gallery_v_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0;
+}
+.gal  li.num {
+    border: 1px #FDA1DF solid;
+}
+.gal  li.num a {
+    color: #FDA1DF;
+}
+.gal  li.num.active {
+    background-color: #FDA1DF;
+}
+.gal  li.num.active a {
+    color: #FFF;
+}
+.gal  ul.gal_list {
+    overflow: hidden;
+    margin: 45px auto 30px;
+    text-align: center;
+}
+.gal   li p {
+    display: inline-block;
+    width: 270px;
+}
+footer.id16 {
+    clear: both;
+    background-image: none;
+    background-color: #FDA1DF;
+}
+@media (min-width: 420px) {
+    .gal  ul.gal_list {
+        text-align: center;
+    }
+    .gal  ul.gal_list li {
+        display: inline-block;
+        width: 200px;
+    }
+}
+.gal  ul.gal_list li {
+    margin: 0 auto 40px;
+    max-width: 200px;
+}
+.gal  ul.gal_list li a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 1%;
+    margin-left: 0;
+    cursor: pointer;
+}
+.gal  ul.gal_list li a img {
+    width: 100%;
+}
+.gal  ul.gal_list li h4 {
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    width: 90%;
+    font-size: 1.375em;
+    color: #fff;
+    font-size: 1.25em;
+    line-height: 1.2em;
+}
+.gal  ul.gal_list li p {
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    color: #fff;
+    position: absolute;
+    width: 164px;
+    top: 80px;
+    left: 20px;
+}
+.gal  ul.gal_list li.photo a {
+    background: url("images/photo.png") no-repeat center 80px;
+}
+.gal main ul.gal_list li.photo a p {
+    top: 80px;
+    left: 20px;
+}
+.gal main ul.gal_list li.video a {
+    background: url("images/video.png") no-repeat center 80px;
+}
+.gal main p.filter {
+    color: #999;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    text-align: center;
+}
+.gal main ul.years {
+    text-align: center;
+    margin: 20px auto 30px;
+}
+.gal main ul.years li a {
+    color: #FDA1DF;
+    cursor: pointer;
+}
+.gal main ul.years li {
+    width: 133px;
+    padding: 15px 30px;
+    border: 2px solid #FDA1DF;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.gal main ul.years li.prew, .gal main ul.years li.next {
+    display: none;
+}
+.gal main ul.years li.active {
+    background-color: #FDA1DF;
+}
+.gal main ul.years li.active a {
+    color: #FFF;
+}
+@media (min-width: 420px) {
+    .gal main ul.years li {
+        display: inline-block;
+        margin: 10px 5px 0;
+    }
+    .gal main ul.years li.prew, .gal main ul.years li.next {
+        display: inline-block;
+        width: 25px;
+        padding: 0;
+        border: 0;
+        margin-top: 0;
+    }
+    .gal main ul.years li.prew a, .gal main ul.years li.next a {
+        font-size: 43px;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    .gal main ul.years li.next {
+        margin: 10px 0 0;
+        width: 35px;
+    }
+}
+.gal main ul.sample, .gal main ul.sample_ph {
+    text-align: center;
+}
+.gal main ul.sample li iframe, .gal main ul.sample_ph li iframe {
+    width: 381px;
+    height: 254px;
+}
+.gal main ul.sample li, .gal main ul.sample_ph li {
+    margin: 5px auto;
+    text-align: center;
+    max-width: 384px;
+    display: inline-block;
+}
 /*----------------------------------------------------------------------------------//
 //-----------------------------------CONTACTS---------------------------------------//
 //----------------------------------------------------------------------------------*/
@@ -761,6 +1426,29 @@ ul.numeric li.num {
   font-weight: bold;
   margin-right: 5px;
   float: left;
+}
+.conta ul.cont_wrapp li.mobile {
+    font-size: 1.25em;
+    line-height: 1.2em;
+    background: url("images/mobile.png") no-repeat 6px center;
+    padding: 2.5px 0 2.5px 55px;
+    margin-bottom: 25px;
+}
+.conta ul.cont_wrapp li.phone {
+    font-size: 1.25em;
+    line-height: 1.2em;
+    background: url("images/phone.png") no-repeat center left;
+    padding: 2.5px 0 2.5px 55px;
+}
+.conta ul.cont_wrapp li.adress_wrapp {
+    width: 59%;
+}
+.conta ul.cont_wrapp li.phone_wrapp {
+    width: 40%;
+}
+.conta ul.cont_wrapp li.adress_wrapp, .conta ul.cont_wrapp li.phone_wrapp {
+    display: inline-block;
+    vertical-align: top;
 }
  footer.id18 {
   clear: both;

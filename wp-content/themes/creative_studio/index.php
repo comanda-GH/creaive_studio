@@ -8,15 +8,20 @@
 <?php get_header()?>
 <!-- header -->
 
+<main class="s_<?php the_id();?>">
+    <?php $title= get_the_title();
+    echo '<h1>'.$title.'</h1>';?>
+
+    <h3 class="title"><a class="title" href="<?php the_permalink(); ?>">head</a></h3>
+    <div class="wrap">
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <div class="box<?php if( $count%3 == 0 ) { echo '-1'; }; $count++; ?>">
+
         <li>
-            <!--Вывод миниатюры-->
-            <?php if ( has_post_thumbnail()): ?><?php the_post_thumbnail(array(100,100), array("class" => "alignleft post_thumbnail"));  ?><?php endif;?>
-            <!--/Вывод миниатюры-->
-            <h3><a class="title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <?php the_content('Докладніше + реєстрація'); ?>
+
+
+            <?php the_content(); ?>
         </li>
     </div>
 

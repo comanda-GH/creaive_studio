@@ -11,8 +11,6 @@ get_header(); ?>
     <?php $title= get_the_title();
     echo '<h1>'.$title.'</h1>';?>
     <div class="wrap">
-
-
             <?php
             if ( have_posts() ) : // если имеются записи в блоге.
                 query_posts('cat=4');   // указываем ID рубрик, которые необходимо вывести.

@@ -15,6 +15,28 @@ add_action('wp_enqueue_scripts', 'enqueue_styles');
 register_nav_menu('menu','Меню');
 /**upload thumbnails***/
 add_theme_support('post-thumbnails');
+
+function wp_corenavi() {
+    global $wp_query;
+    $pages = '';
+    $max = $wp_query->max_num_pages;
+    if (!$current = get_query_var('paged')) $current = 1;
+    $a['base'] = str_replace(999999999, '%#%', get_pagenum_link(999999999));
+    $a['total'] = $max;
+    $a['current'] = $current;
+
+    $total = 1; //1 - выводить текст "Страница N из N", 0 - не выводить
+    $a['mid_size'] = 3; //сколько ссылок показывать слева и справа от текущей
+    $a['end_size'] = 1; //сколько ссылок показывать в начале и в конце
+    $a['prev_text'] = '&laquo;'; //текст ссылки "Предыдущая страница"
+    $a['next_text'] = '&raquo;'; //текст ссылки "Следующая страница"
+
+    if ($max > 1) echo '<div class="navigation">';
+    if ($total == 1 && $max > 1) $pages = '<span class="pages">Страница ' . $current . ' из ' . $max . '</span>'."\r\n";
+    echo $pages . paginate_links($a);
+    if ($max > 1) echo '</div>';
+}
+
 /*function enqueue_scripts () {
     wp_register_script('html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js');
     wp_enqueue_script('html5-shim');

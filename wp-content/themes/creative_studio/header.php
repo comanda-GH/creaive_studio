@@ -33,6 +33,7 @@
         <li><span>Меню</span></li>
         <?php wp_nav_menu(array('theme_location'=>'menu',
             'menu_class'=>'nav'))?>
+
     </header>
 </section>
 
