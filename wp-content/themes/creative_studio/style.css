@@ -97,15 +97,15 @@ section.header-wrap header h1, section.header-wrap header.fix h1 a {
 }
 /****************mobile main  menu*******************/
 @media (max-width: 640px) {
-    section.header-wrap header ul.nav,header li span{
+    section.header-wrap header ul.nav {
         float: right;
         vertical-align: middle;
         position: absolute;
-        right: 40px;
+        right: 15px;
         top: 65px;
         overflow: hidden;
     }
-    section.header-wrap header ul.nav li {
+    section.header-wrap header ul.nav li  {
         display: none;
     }
     section.header-wrap header ul.nav li a {
@@ -113,24 +113,23 @@ section.header-wrap header h1, section.header-wrap header.fix h1 a {
         font-size: 1.25em;
         line-height: 1.2em;
         position: inherit;
+        color: #fff;
     }
-    section.header-wrap header /*ul.nav li:first-child , header*/ li span{
+    section.header-wrap header ul.nav li.menu-item-38 a{
+
+    }
+    section.header-wrap header ul.nav li:first-child {
         display: block;
         background: url("images/mobile-menu-icon.png") left center no-repeat;
         padding: 5px 0 5px 40px;
     }
-    section.header-wrap header ul.nav li:first-child {
-        display: block;
-        color: #ffffff;
-        /*background: url("images/mobile-menu-icon.png") left center no-repeat;*/
-        padding: 5px 0 5px 40px;
-    }
-    section.header-wrap header li span/*ul.nav li:first-child span*/ {
+    section.header-wrap header ul.nav li:first-child span {
         font-size: 1.25em;
         line-height: 1.2em;
     }
     section.header-wrap header ul.nav:hover {
         background-color: #CAE2F5;
+        z-index: 999;
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
         opacity: 0.85;
     }
@@ -148,27 +147,35 @@ section.header-wrap header h1, section.header-wrap header.fix h1 a {
 section.header-wrap header ul.nav li.menu-item-31 a {
   border-bottom: 4px solid #FF9673;
 }
+/*about us*/
 section.header-wrap header ul.nav li.menu-item-38 a {
   border-bottom: 4px solid #FFFF73;
 }
+/*projects*/
 section.header-wrap header ul.nav li.menu-item-39 a {
   border-bottom: 4px solid #99FF99;
 }
+/*studios*/
 section.header-wrap header ul.nav li.menu-item-40 a {
   border-bottom: 4px solid #73FFFF;
 }
+/*affishi*/
 section.header-wrap header ul.nav li.menu-item-33 a {
-  border-bottom: 4px solid #7396FF;
+  border-bottom: 4px solid #FF9673;
 }
+/*grafic*/
 section.header-wrap header ul.nav li.menu-item-35 a {
-  border-bottom: 4px solid #B973FF;
+  border-bottom: 4px solid  #7396FF;
 }
+/*news*/
 section.header-wrap header ul.nav li.menu-item-37 a {
-  border-bottom: 4px solid #FFD558;
+  border-bottom: 4px solid  #B973FF;
 }
+/*gallery*/
 section.header-wrap header ul.nav li.menu-item-34 a {
   border-bottom: 4px solid #FF73FF;
 }
+/*contacts*/
 section.header-wrap header ul.nav li.menu-item-36 a {
   border-bottom: 4px solid #FF7373;
 }
@@ -422,7 +429,30 @@ footer ul.footer li ul.social li ul li.spilka-logo {
   padding-bottom: 3px;
   margin-right: 0;
 }
-
+/*----------------------------------------------------------------------------------//
+//-------------------------------------GRAFIC--------------------------------------//
+//----------------------------------------------------------------------------------*/
+.grafic h1 {
+    font-family: "Comfortaa";
+    font-weight: normal;
+    color: #FFF;
+    background: url("images/studios_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    font-size: 3.75em;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 20px 0;
+}
+.grafic ul.day li {
+    display: inline-block;
+}
+.grafic span.www{
+border: #101010;
+}
+footer.id8 , footer.id10{
+    background-image: none;
+    background-color: #00B1E7;
+}
 /*----------------------------------------------------------------------------------//
 //-------------------------------------STUDIOS--------------------------------------//
 //----------------------------------------------------------------------------------*/
@@ -1023,26 +1053,6 @@ footer.id91 {
     margin: 0 auto;
   }
 }
-
-ul.numeric {
-  text-align: center;
-  margin-bottom: 40px;
-}
-ul.numeric li {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-}
-ul.numeric li a {
-  line-height: 30px;
-  cursor: pointer;
-}
-ul.numeric li.num {
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-}
-
  footer.id14 {
   clear: both;
   background-image: none;
@@ -1063,23 +1073,11 @@ ul.numeric li.num {
   text-align: center;
   padding: 20px 0;
 }
-.new main li.num {
-  border: 1px #BA75FF solid;
-}
-.new main li.num a {
-  color: #BA75FF;
-}
-.new main li.num.active {
-  background-color: #BA75FF;
-}
-.new main li.num.active a {
-  color: #FFF;
-}
 
 .new .listnews li {
   margin: 45px 28px;
 }
-.new .listnews span {
+.new .listnews span.date {
   display: block;
   padding: 10px 7px;
   font-size: 1em;
@@ -1101,7 +1099,58 @@ ul.numeric li.num {
 .new .listnews p {
   color: #444444;
 }
+/***************pagination**************/
+.new .page-numbers,a.page-numbers{
+    text-decoration: none;
+    border: 1px solid #BA75FF;
+    padding: 3px 8px;
+    margin: 6px;
+    color: #BA75FF;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    line-height: 30px;
+}
 
+.new span.current{
+    background: #BA75FF;
+    color: #fff;
+    border-color: #BA75FF;
+    font-weight: bold;
+}
+nav.pagination{
+    margin:50px 0;
+    text-align: center;
+    padding: 5px;
+}
+nav.pagination h2 {
+    display: none;
+}
+
+/*nav div, div.nav-links span.page-numbers  {
+
+    text-align: center;
+    margin-bottom: 40px;
+}
+nav h2{
+    display:none;
+}
+.new nav div a.page-numbers , .new nav span {
+
+    border: 1px solid #BA75FF;
+    border-radius: 100%;
+    text-align: center;
+
+    color: #BA75FF;
+}
+
+.new nav div a.page-numbers.active {
+    background-color: #BA75FF;
+}
+.new main li.num.active a {
+    color: #FFF;
+}*/
+/*************end pagination**************/
  footer.id12 {
   clear: both;
   background-image: none;
@@ -1618,7 +1667,7 @@ html {
   }
 }
 @media (min-width: 480px) {
-  .new .listnews span {
+  .new .listnews span.date {
     float: left;
     width: 65px;
     height: 59px;

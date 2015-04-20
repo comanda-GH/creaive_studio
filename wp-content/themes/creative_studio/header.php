@@ -30,7 +30,7 @@
 <section class="header-wrap">
     <header class="fix">
         <h1><a href="/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Творча майстерня"></a></h1>
-        <li><span>Меню</span></li>
+
         <?php wp_nav_menu(array('theme_location'=>'menu',
             'menu_class'=>'nav'))?>
 

@@ -11,53 +11,30 @@
         echo '<h1>'.$title.'</h1>';?>
         <div class="wrap">
             <?php
-            query_posts('cat=14');   // указываем ID рубрик, которые необходимо вывести.
+            $date_today_server = date("y.m.d");  // получаем дату сервера
+            //query_posts('cat=14');   // указываем ID рубрик, которые необходимо вывести.
+            query_posts('post_type=afisha'); // задаем параметры для вывода записей
             if ( have_posts() ) : // если имеются записи в блоге.
                 while (have_posts()) : the_post();  // запускаем цикл обхода материалов блога
                     ?>
-                    <li>
-                        <?php if ( has_post_thumbnail()): ?><?php the_post_thumbnail(); ?><?php endif;?>
-                        <?php the_content(); ?>
-                    </li>
+                    <ul>
+                       <?php $data = get_post_meta($post->ID, 'data_end_gg_mm_dd', true); // получаем произвольное поле?>
+                       <?php $hours = get_post_meta($post->ID, 'hours', true); // получаем произвольное поле?>
+                        <?php list($yearpost, $monthpost, $daypost) = explode(".", $data); // преобразуем дату в человечный вид
+                        $arrpost = array(1 => "січня", 2 => "лютого", 3 => "березня", 4 => "квітня", 5 => "травня", 6 => "червня", 7 => "липня", 8 => "серпня", 9 => "вересня", 10 => "жовтня", 11 => "листопада", 12 => "грудня"); // преобразуем дату в человечный вид
+                        if(preg_match("|^d{2}$|", $yearpost)) $yearpost = "20$yearpost"; // преобразуем дату в человечный вид?>
+                        <?php echo "$daypost ".$arrpost[intval($monthpost)]." $yearpost"; ?>
+                        <li><?php the_post_thumbnail(); ?></li>
+                        <li><?php the_title();?></li>
+                        <li><?php echo $data.'  '.$hours?></li>
+                        <li><?php the_content(); ?></li>
+                    </ul>
                 <?php endwhile;  // завершаем цикл.
             endif;
             /* Сбрасываем настройки цикла. Если ниже по коду будет идти еще один цикл, чтобы не было сбоя. */
             wp_reset_query();
             ?>
-            <!--<ul class="slide">
-                <li>
-                    <img src="../images/slide1.png" alt="slide1" />
-                </li>
-                <li>
-                    <img src="../images/slide2.png" alt="slide2" />
-                </li>
-                <li>
-                    <img src="../images/slide3.png" alt="slide3" />
-                </li>
-            </ul>
-            <ul class="numeric">
-                <li>
-                    <a><</a>
-                </li>
-                <li class="num">
-                    <a>1</a>
-                </li>
-                <li class="num active">
-                    <a>2</a>
-                </li>
-                <li class="num">
-                    <a>3</a>
-                </li>
-                <li class="num">
-                    <a>4</a>
-                </li>
-                <li>
-                    <a>...</a>
-                </li>
-                <li>
-                    <a>></a>
-                </li>
-            </ul>-->
+
         </div>
 
     </main>
