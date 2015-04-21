@@ -53,17 +53,21 @@ $red_meta_fields = array(
         'id'    => 'select_type',
         'type'  => 'select',
         'options' => array (  // Параметры, всплывающие данные
-            'one' => array (
+            '1' => array (
                 'label' => 'Ранній розвиток “Перші кроки”',  // Название поля
                 'value' => 'Ранній розвиток “Перші кроки”'  // Значение
             ),
-            'two' => array (
+            '2' => array (
                 'label' => 'Консультація психолога',  // Название поля
                 'value' => 'Консультація психолога'  // Значение
             ),
-            'three' => array (
+            '3' => array (
                 'label' => 'Просвітницькі тренінги',  // Название поля
                 'value' => 'Просвітницькі тренінги'  // Значение
+            ),
+            '4' => array (
+                'label' => 'Студія хореографії',  // Название поля
+                'value' => 'Студія хореографії'  // Значение
             )
         )
     ),
@@ -105,11 +109,41 @@ $red_meta_fields = array(
         )
     ),
     array(
-        'label' => 'Години',
+        'label' => 'Пн',
         'desc'  => '',
-        'id'    => 'hours', // даем идентификатор.
+        'id'    => '1', // даем идентификатор.
         'type'  => 'text'  // Указываем тип поля.
-    )
+    ),
+    array(
+        'label' => 'Вт',
+        'desc'  => '',
+        'id'    => '2', // даем идентификатор.
+        'type'  => 'text'  // Указываем тип поля.
+    ),
+    array(
+        'label' => 'Ср',
+        'desc'  => '',
+        'id'    => '3', // даем идентификатор.
+        'type'  => 'text'  // Указываем тип поля.
+    ),
+    array(
+        'label' => 'Пн',
+        'desc'  => '',
+        'id'    => '4', // даем идентификатор.
+        'type'  => 'text'  // Указываем тип поля.
+    ),
+    array(
+        'label' => 'Вт',
+        'desc'  => '',
+        'id'    => '5', // даем идентификатор.
+        'type'  => 'text'  // Указываем тип поля.
+    ),
+    array(
+        'label' => 'Ср',
+        'desc'  => '',
+        'id'    => '6', // даем идентификатор.
+        'type'  => 'text'  // Указываем тип поля.
+    ),
 );
 function show_grafic_metabox()
 {
@@ -128,13 +162,14 @@ function show_grafic_metabox()
                 <td>';
         switch ($field['type']) {
             // Текстовое поле
-            case 'checkbox_group':
+            /*case 'checkbox_group':
                 foreach ($field['options'] as $option) {
                     echo '<input type="checkbox" value="'.$option['value'].'" name="'.$field['id'].'[]" id="'.$option['value'].'"',$meta && in_array($option['value'], $meta) ? ' checked="checked"' : '',' />
             <label for="'.$option['value'].'">'.$option['label'].'</label><br />';
                 }
-                break;
+                break;*/
             case 'text':
+
                 echo '<input type="text" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" size="30" />
 					        <br /><span class="description">' . $field['desc'] . '</span>';
                 break;

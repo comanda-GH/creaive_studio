@@ -17,13 +17,13 @@
             if ( have_posts() ) : // если имеются записи в блоге.
                 while (have_posts()) : the_post();  // запускаем цикл обхода материалов блога
                     ?>
-                    <ul>
                        <?php $data = get_post_meta($post->ID, 'data_end_gg_mm_dd', true); // получаем произвольное поле?>
                        <?php $hours = get_post_meta($post->ID, 'hours', true); // получаем произвольное поле?>
                         <?php list($yearpost, $monthpost, $daypost) = explode(".", $data); // преобразуем дату в человечный вид
                         $arrpost = array(1 => "січня", 2 => "лютого", 3 => "березня", 4 => "квітня", 5 => "травня", 6 => "червня", 7 => "липня", 8 => "серпня", 9 => "вересня", 10 => "жовтня", 11 => "листопада", 12 => "грудня"); // преобразуем дату в человечный вид
                         if(preg_match("|^d{2}$|", $yearpost)) $yearpost = "20$yearpost"; // преобразуем дату в человечный вид?>
-                        <?php echo "$daypost ".$arrpost[intval($monthpost)]." $yearpost"; ?>
+                        <?php "$daypost ".$arrpost[intval($monthpost)]." $yearpost"; ?>
+                    <ul class="slide">
                         <li><?php the_post_thumbnail(); ?></li>
                         <li><?php the_title();?></li>
                         <li><?php echo $data.'  '.$hours?></li>

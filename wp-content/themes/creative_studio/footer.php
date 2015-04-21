@@ -6,9 +6,9 @@
  * Time: 13:48
  */?>
 <!--content-->
-<footer class="id<?php echo get_the_id()?>">
+<footer class="id<?php echo $wp_query->get_queried_object_id()?>">
     <ul class="footer">
-        <li>
+        <li class="first">
             <img src="<?php bloginfo('template_url'); ?>/images/logo_foot.png" alt="Творча майстерня"/>
             <ul class="contacts">
                 <li><span>Проект “Відкрий в собі зірку”</span></li>
@@ -17,7 +17,7 @@
                 <li><a href="mailto:youth-organization@mail.ru">e-mail youth-organization@mail.ru</a></li>
             </ul>
         </li>
-        <li>
+        <li class="second">
             <ul class="social">
                 <li>
                     <span class="spilka">Спілка дитячих та юнацьких організацій Черкащини</span>
@@ -42,7 +42,7 @@
                     </ul>
                 </li>
                 <li>
-                    <span class="copyright">Copyright &copy; 2015-<?php echo date('Y');?>. All Rights Reserved.</span>
+                    <span class="copyright">Powered by Geekhub</span>
                 </li>
             </ul>
         </li>
